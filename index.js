@@ -31,13 +31,13 @@ app.disable('x-powered-by');
 
 // catch 404 and forward to error handler
 app.use('/', index);
-app.use((err, req, res, next) => {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: err
-    });
-});
+// app.use((err, req, res, next) => {
+//     res.status(err.status || 500);
+//     res.render('error', {
+//         message: err.message,
+//         error: err
+//     });
+// });
 
 app.set('port', process.env.PORT || process.env.port);
 const server = http.createServer(app);
